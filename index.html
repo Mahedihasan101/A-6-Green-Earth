@@ -13,6 +13,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- font family -->
+     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
     <!-- tailwind+daisyui cdn -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
@@ -20,6 +23,11 @@
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      * {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -72,13 +80,13 @@
     <main class="bg-[#f0fdf4]">
       <section>
         <div
-          class="flex items-center justify-between max-w-[1920] mx-auto bg-[#cff0dc]"
+          class="flex flex-col md:flex-row items-center justify-between max-w-[1920] mx-auto bg-[#cff0dc]"
         >
-          <div class="w-[546px]">
+          <div>
             <img src="./assets/hero-leaf1.png" alt="" />
           </div>
           <div class="text-center">
-            <h1 class="font-bold text-5xl text-[#1f2937] mb-4">
+            <h1 class="font-bold text-3xl md:text-5xl text-[#1f2937]  mb-4 mt-5 mt-0">
               Plant a Tree, Grow a Future
             </h1>
             <p class="font-normal text-[#425158] mb-6">
@@ -91,28 +99,45 @@
               >Get Involved</a
             >
           </div>
-          <div class="w-[546px]">
+          <div>
             <img src="./assets/hero-leaf2.png" alt="" />
           </div>
         </div>
+      </section>
+
+      <section class="w-[1650px] m-auto h-[875px]">
+        <h1 class="font-semibold text-[32px] text-center mt-24 mb-10">Choose Your Trees</h1>
+       <div class="grid grid-cols-12 gap-[30px] ">
+         <div class="col-span-2 ">
+          <h1 class="font-semibold text-[20px] ">Categories</h1>
+          <div class="categories-container">
+            <ul id="categories-container" class="font-normal text-[16px] flex flex-col gap-4 mt-5  ">
+              
+              
+            </ul>
+          </div>
+        </div>
+        <div class="col-span-8 border-2 border-green-400">ami aci</div>
+        <div class="col-span-2 border-2 border-sky-400">dtdrtyjdy</div>
+       </div>
       </section>
 
       <section>
         <h1 class="text-center mt-24 mb-10 font-semibold text-[32px]">
           About the Campaign
         </h1>
-        <div class="flex items-center max-w-[1090px] mx-auto mb-24">
-          <div class="w-[530px] flex-1">
+        <div class="flex flex-col md:flex-row items-center max-w-[1090px] mx-auto mb-24">
+          <div class="flex-1">
             <img src="./assets/about.png" alt="" />
           </div>
-          <div class="flex-1 font-normal text-[16px] text-[#49535d] ml-7">
+          <div class="flex-1 font-normal text-[16px] text-[#49535d] ml-3 md:ml-7 mt-10 md:mt-0">
             <p>
               Green Earth is a global tree plantation initiative dedicated to
               fighting climate change. Since our start, we’ve planted over
               500,000 trees worldwide. By joining our campaign, you help restore
               forests, create habitats for wildlife, and combat global warming.
             </p>
-            <ul class="list-disc list-inside">
+            <ul class="list-disc list-inside ml-4 md:ml-0">
               <li>Restoration of natural habitats</li>
               <li>Improvement of air quality</li>
               <li>Support for local communities</li>
@@ -123,7 +148,7 @@
 
       <section class="bg-[#cff0dc] py-[80px]">
         <h1 class="text-center font-semibold text-[32px] mb-10">Our Impact</h1>
-        <div class="grid grid-cols-3 gap-12 max-w-[1650px] mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-12 max-w-[1650px] mx-auto">
           <div class="bg-[#ffffff] text-center px-40 py-10 rounded-xl hover:scale-110 hover:bg-green-200 shadow-sm">
             <h1 class="font-semibold text-[32px] text-[#15803d]">500k+</h1>
             <p class="font-normal text-[16px] text-[#4c545f]">Trees Planted</p>
@@ -146,7 +171,7 @@
       <section>
        <div class="py-24 text-center bg-[#166534]">
          <h1 class="font-semibold text-[32px] text-white mb-10">Plant a Tree Today</h1>
-        <form class="bg-[#15803d] w-[650px] m-auto p-[40px] rounded-xl shadow-md">
+        <form class="bg-[#15803d]  max-w-[650px] m-auto p-[40px] rounded-xl shadow-md">
           <label for="">
             <input type="text" placeholder="Your Name" class="input w-full mb-3 font-normal text-[16px] p-3" /> <br>
           </label>
@@ -169,6 +194,7 @@
     <footer class="bg-[#14532d] py-6">
         <p class="text-center text-white">@ 2025 Green Earth. All Rights Reserved</p>
     </footer>
+    <script src="./script/index.js"></script>
   </body>
 </html>
 
