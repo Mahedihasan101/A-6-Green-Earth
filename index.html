@@ -63,7 +63,9 @@
                 <li><a>Plant a Tree</a></li>
               </ul>
             </div>
-            <a class="btn btn-ghost text-xl text-white">Green Earth</a>
+            <a class="btn btn-ghost text-xl text-white"
+              ><span><i class="fa-solid fa-tree"></i> </span>Green Earth</a
+            >
           </div>
           <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1 text-white">
@@ -89,9 +91,7 @@
             <img src="./assets/hero-leaf1.png" alt="" />
           </div>
           <div class="text-center">
-            <h1
-              class="font-bold text-3xl md:text-5xl text-[#1f2937] mb-4 mt-4 "
-            >
+            <h1 class="font-bold text-3xl md:text-5xl text-[#1f2937] mb-4 mt-4">
               Plant a Tree, Grow a Future
             </h1>
             <p class="font-normal text-[#425158] mb-6">
@@ -110,14 +110,17 @@
         </div>
       </section>
 
+      <section>
+        <div id="spinner" class="flex items-center justify-center mt-16 hidden">
+          <span class="loading loading-dots loading-xl"></span>
+        </div>
+      </section>
+
       <section class="max-w-[1650px] m-auto">
-        <h1 class="font-semibold text-[32px] text-center mt-24 mb-10">
-          Choose Your Trees
-        </h1>
-        <div class="grid grid-cols-12 gap-[30px]">
-          <div class="col-span-2">
+        <div class="grid grid-cols-1 sm:grid-cols-12 gap-[30px] mt-18 mb-10">
+          <div class=" col-span-1 sm:col-span-2 ml-5 md:ml-0">
             <h1 class="font-semibold text-[20px]">Categories</h1>
-            <div class="categories-container">
+            <div class="categories-container ">
               <ul
                 id="categories-container"
                 class="font-normal text-[16px] flex flex-col gap-4 mt-5"
@@ -125,23 +128,22 @@
             </div>
           </div>
           <div
-            id="card-container" class="col-span-8 grid grid-cols-3 gap-7">
-          </div>
+            id="card-container"
+            class="col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-7"
+          ></div>
 
-          <div class="col-span-2 bg-white rounded-xl">
+          <div class="col-span-1  md:col-span-2 bg-white rounded-xl">
             <h1 class="font-semibold text-[20px] py-4 px-2">Your Cart</h1>
-            <div id="card-aside-container" class=" py-4 px-2">
-             <div>
-              <div>
-                <h1></h1>
-                <p></p>
+            <div class="flex flex-col justify-between">
+              <div id="card-aside-container" class="px-2"></div>
+              <div
+                class="border-t border-black m-2 flex justify-between items-center"
+              >
+                <h1>Total:</h1>
+                <p id="total">0</p>
               </div>
-              <div></div>
-             </div>
             </div>
           </div>
-
-          
         </div>
       </section>
 
